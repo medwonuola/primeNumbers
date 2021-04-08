@@ -16,4 +16,3 @@ function isPrime(number) {
 }
 
 console.log(isPrime(1));
-
