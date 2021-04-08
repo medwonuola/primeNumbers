@@ -1,31 +1,19 @@
-let primeNumbers = [];
+//skrrrrrr
 
-for (i = 0; i <= 5; i++) {
+function isPrime(number) {
+  let primeNumbers = [];
+
+  for (i = 0; i <= 100; i++) {
     if (i == 0 || i == 1) {
-        continue;
+      continue;
     }
-    
-    if (i == 2) {
-        primeNumbers.push(2);
-        continue;
+    if (primeNumbers.every((number) => i % number != 0)) {
+      primeNumbers.push(i);
     }
+  }
 
-    for (j = 0; j < primeNumbers.length; j++) {
-        
-        if (i % primeNumbers[j] == 0) {
-          continue;
-        }
-
-        if (i % primeNumbers[j] != 0) {
-            
-            console.log(`i: ${i}, j: ${j}, prime numbers: ${primeNumbers}`);
-            console.log(primeNumbers);
-
-            console.log(`i % primeNumbers[j] ${i % primeNumbers[j]}`);
-
-            primeNumbers.push(i);
-        }
-    }
+  return primeNumbers.includes(number);
 }
 
-console.log(primeNumbers);
+console.log(isPrime(1));
+
