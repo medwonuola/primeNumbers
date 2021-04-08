@@ -14,5 +14,3 @@ function isPrime(number) {
 
   return primeNumbers.includes(number);
 }
-
-console.log(isPrime(1));
