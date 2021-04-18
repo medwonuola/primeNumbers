@@ -1,16 +1,14 @@
-//skrrrrrr
-
 function isPrime(number) {
-  let primeNumbers = [];
+    let primeNumbers = [];
 
-  for (i = 0; i <= 100; i++) {
-    if (i == 0 || i == 1) {
-      continue;
+    for (i = 0; i <= number; i++) {
+        if (i == 0 || i == 1) {
+            continue;
+        }
+        if (primeNumbers.every((number) => i % number != 0)) {
+            primeNumbers.push(i);
+        }
     }
-    if (primeNumbers.every((number) => i % number != 0)) {
-      primeNumbers.push(i);
-    }
-  }
 
-  return primeNumbers.includes(number);
+    return primeNumbers.includes(number);
 }
